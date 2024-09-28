@@ -8,9 +8,9 @@ const mobileBtnOffers = document.querySelector('.mobile-btn-offers')
 
 function changeImage() {
 	if (window.innerWidth < 800) {
-		lakeImg.src = '../src/img/waterSmall.jpg'
+		lakeImg.src = './src/img/waterSmall.jpg'
 	} else {
-		lakeImg.src = '../src/img/WaterLarge.jpg'
+		lakeImg.src = './src/img/WaterLarge.jpg'
 	}
 }
 
