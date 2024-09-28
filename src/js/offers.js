@@ -8,13 +8,13 @@ const mobileMenuAnimation = document.querySelector('.mobile-menu-animation')
 
 function changeImage() {
 	if (window.innerWidth < 800) {
-		picnicImg.src = '../../src/img/piknikSmall.jpg'
-		waterImg.src = '../../src/img/waterEqSmall.jpg'
-		cateringImg.src = '../../src/img/cateringSmall.jpg'
+		picnicImg.src = './src/img/piknikSmall.jpg'
+		waterImg.src = './src/img/waterEqSmall.jpg'
+		cateringImg.src = './src/img/cateringSmall.jpg'
 	} else {
-		picnicImg.src = '../../src/img/piknikLarge.jpg'
-		waterImg.src = '../../src/img/waterEqLarge.jpg'
-		cateringImg.src = '../../src/img/cateringLarge.jpg'
+		picnicImg.src = './src/img/piknikLarge.jpg'
+		waterImg.src = './src/img/waterEqLarge.jpg'
+		cateringImg.src = './src/img/cateringLarge.jpg'
 	}
 }
 
