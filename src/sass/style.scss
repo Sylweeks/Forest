@@ -1,0 +1,718 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth !important;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+	background-color: rgb(255, 255, 255);
+	font-size: 20px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	color: rgb(11, 11, 11);
+}
+
+.wrapper {
+	width: 100%;
+}
+
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 80px;
+	align-items: center;
+
+	.logo {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		width: 180px;
+		font-size: 40px;
+		font-weight: 400;
+		cursor: pointer;
+	}
+
+	.hamburger {
+		margin-top: 10px;
+		margin-right: 10px;
+	}
+
+	.nav-menu {
+		display: none;
+		height: 100px;
+		list-style: none;
+
+		li {
+			width: 120px;
+		}
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			width: 100%;
+			text-decoration: none;
+			color: rgb(22, 22, 22);
+			font-weight: 400;
+			transition: background-color 0.3s, color 0.3s;
+		}
+
+		li:hover a {
+			background-color: rgb(0, 0, 0);
+			color: rgb(255, 255, 255);
+		}
+	}
+}
+
+//HERO
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	z-index: 5;
+	.offers-btn {
+		display: inline-block;
+		width: 300px;
+		height: 100px;
+		margin-bottom: 50px;
+		padding: 30px 20px;
+		font-size: 36px;
+		font-weight: 800;
+		color: rgb(255, 255, 255);
+		background-color: tomato;
+		text-transform: uppercase;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 5px;
+		transition: background-color 0.3s ease;
+	}
+	.offers-btn:hover {
+		background-color: rgb(0, 187, 97);
+	}
+}
+.hero {
+	position: relative;
+	height: 60vh;
+	width: 100%;
+	color: white;
+	background-image: url('../../src/img/Jungle-small.jpg');
+	background-size: cover;
+	background-position: 0% 80%;
+
+	.hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: #000000a3;
+	}
+	.hero-title {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 300px;
+		padding-left: 10px;
+		color: white;
+		z-index: 999;
+		h2 {
+			font-weight: 200;
+			margin-bottom: 5px;
+		}
+		h1 {
+			font-size: 26px;
+		}
+	}
+}
+
+// about us
+
+.about-us {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 40px;
+
+	.about-us-title {
+		margin-top: 50px;
+		font-size: 42px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+	.about-us-info {
+		margin-top: 25px;
+		img {
+			width: 100%;
+		}
+		.about-us-text {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			padding: 0 15px;
+
+			h3 {
+				margin: 20px auto;
+			}
+			p {
+				text-align: left;
+			}
+		}
+	}
+}
+//adventure section
+.adventure {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 100%;
+	height: 300px;
+	background-image: url('../../src/img/Girl\ small.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: -2;
+	.adventure-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: #011404aa;
+		z-index: -99;
+	}
+	.adventure-button {
+		width: 300px;
+		height: 100px;
+		background-color: #f9f9f900;
+		font-size: 22px;
+		color: white;
+		border: 1px solid white;
+		cursor: pointer;
+		transition: background-color 0.3s, color 0.3s;
+		z-index: 100000;
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.753);
+			color: black;
+		}
+	}
+}
+
+// offers
+
+.offers {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: 40px;
+
+	.offers-title {
+		h2 {
+			margin: 30px auto 20px;
+			text-align: center;
+			font-size: 36px;
+			font-weight: 200;
+			text-transform: uppercase;
+			letter-spacing: 4px;
+		}
+		p {
+			margin-bottom: 20px;
+			font-size: 24px;
+			text-align: center;
+		}
+	}
+
+	.offers-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.offer {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 300px;
+			height: 450px;
+			margin-bottom: 25px;
+			border-radius: 6px;
+			box-shadow: 1px 1px 7px rgb(177, 177, 177);
+
+			h2 {
+				margin: 20px auto;
+				text-align: center;
+			}
+			p {
+				margin-bottom: 15px;
+				font-size: 42px;
+				font-weight: 800;
+				text-align: center;
+			}
+			.offer-content {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 350px;
+				ul {
+					margin: auto 15px;
+					list-style: none;
+					font-size: 20px;
+
+					li {
+						margin-bottom: 10px;
+						img {
+							margin-right: 10px;
+						}
+					}
+					.available {
+						font-weight: 400;
+					}
+					.not-available {
+						font-weight: 400;
+						color: grey;
+					}
+				}
+
+				.offer-btn {
+					height: 50px;
+					width: 250px;
+					margin-top: 40px;
+					font-size: 24px;
+					border-radius: 6px;
+					border: none;
+					box-shadow: 1px 1px 7px rgb(133, 133, 133);
+					cursor: pointer;
+				}
+				.offer-btns {
+					transition: background-color 0.3s, color 0.3s;
+					background-color: white;
+				}
+
+				.offer-btn-second {
+					transition: background-color 0.3s, color 0.3s;
+					background-color: rgb(21, 192, 115);
+					color: white;
+				}
+
+				.offer-btns:hover {
+					background-color: rgb(21, 192, 115);
+					color: white;
+				}
+				.offer-btn-second:hover {
+					background-color: rgb(255, 255, 255);
+					color: black;
+				}
+			}
+		}
+	}
+}
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	background-color: #ededed;
+	color: #000000;
+
+	.footer-line {
+		height: 1px;
+		border: 1px solid rgb(152, 152, 152);
+	}
+	.footer-top {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 30px auto;
+
+		.footer-left {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 200px;
+			font-size: 28px;
+			font-weight: 800;
+			text-align: center;
+			color: #282626;
+			.logo-desktop {
+				display: none;
+			}
+
+			span {
+				display: block;
+			}
+		}
+
+		.footer-right {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			width: 40%;
+			margin-right: 20px;
+
+			.footer-menu-section {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				align-items: flex-start;
+				margin-bottom: 20px;
+				h2 {
+					a {
+						text-decoration: none;
+						color: #009688;
+					}
+				}
+				ul {
+					list-style: none;
+					li {
+						a {
+							text-decoration: none;
+							color: #333;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.footer-bottom {
+		margin: 20px auto;
+		text-align: center;
+	}
+}
+
+.mobile-menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	position: absolute;
+	left: -2000px;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: white;
+	z-index: 10000;
+	transition: left 0.3s ease-in-out;
+
+	.mobile-menu-logo {
+		margin: 30px 0;
+		font-size: 52px;
+		font-weight: 800;
+	}
+
+	ul {
+		width: 100%;
+		list-style: none;
+		li {
+			width: 100%;
+			margin-bottom: 20px;
+			padding: 20px 0;
+			font-size: 28px;
+			font-weight: 800;
+			text-align: center;
+			transition: background-color 0.3s, color 0.3s;
+			a {
+				width: 100%;
+				text-decoration: none;
+				color: #000000;
+			}
+		}
+		li:hover {
+			background-color: rgb(21, 192, 115);
+			a {
+				color: white;
+			}
+		}
+	}
+	.mobile-menu-btn {
+		width: 200px;
+		height: 75px;
+		background-color: rgb(236, 171, 102);
+		font-size: 28px;
+		text-transform: uppercase;
+		color: white;
+		border: none;
+		border-radius: 8px;
+	}
+}
+
+.mobile-menu-animation {
+	left: 0 !important;
+}
+
+@media (min-width: 576px) {
+	main {
+		.offers-btn {
+			width: 400px;
+		}
+	}
+	.wrapper {
+		margin: auto;
+		width: 576px;
+	}
+	.hero {
+		background-image: url('../../src/img/Jungle-large.jpg');
+		.hero-title {
+			padding-left: 50px;
+			h1 {
+				font-size: 32px;
+			}
+		}
+	}
+	.about-us {
+		width: 100%;
+		.about-us-info {
+			img {
+				width: 100%;
+			}
+			p {
+				font-size: 24px;
+			}
+		}
+	}
+	.adventure {
+		.adventure-button {
+			width: 400px;
+		}
+	}
+	.offers {
+		.offers-box {
+			.offer {
+				width: 400px;
+
+				.offer-content {
+					ul {
+						font-size: 24px;
+					}
+				}
+			}
+		}
+	}
+
+	.footer {
+		.footer-top {
+			.footer-left {
+				.logo-desktop {
+					display: block;
+				}
+				.logo-mobile {
+					display: none;
+				}
+				span {
+					font-size: 36px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.wrapper {
+		width: 768px;
+		.nav-menu {
+			display: flex;
+
+			.li {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+		}
+		.hamburger {
+			display: none;
+		}
+
+		.about-us {
+			width: 100%;
+			.about-us-info {
+				img {
+					width: 100%;
+				}
+				.about-us-text {
+					h3 {
+						font-size: 36px;
+					}
+					p {
+						font-size: 22px;
+						text-align: justify;
+					}
+				}
+			}
+		}
+	}
+	.adventure {
+		background-image: url('../../src/img/Girl\ large.jpg');
+		.adventure-button {
+			width: 500px;
+		}
+	}
+
+	.offers {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.offers-box {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			flex-wrap: wrap;
+		}
+	}
+	.footer {
+		.footer-top {
+			justify-content: center;
+			gap: 50px;
+			.footer-left {
+				justify-content: start;
+				width: 35%;
+				.logo {
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-items: center;
+				}
+				.logo-desktop {
+					display: block;
+				}
+				.logo-mobile {
+					display: none;
+				}
+				span {
+					font-size: 48px;
+				}
+			}
+			.footer-right {
+				display: flex;
+				flex-direction: row;
+				justify-content: end;
+				flex-wrap: wrap;
+				gap: 20px;
+				width: 100%;
+
+				.footer-menu-section {
+					width: 180px;
+				}
+				.about-us {
+					width: 120px;
+				}
+			}
+		}
+	}
+	.mobile-menu {
+		display: none;
+	}
+}
+
+@media (min-width: 992px) {
+	.wrapper {
+		width: 992px;
+		.about-us {
+			width: 100%;
+			margin-bottom: 40px;
+			.about-us-info {
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+				img {
+					width: 45%;
+				}
+				.about-us-text {
+					display: flex;
+					flex-direction: column;
+					align-items: start;
+					margin-left: 40px;
+					h3 {
+						margin: 0px 0px 10px 0px;
+						font-size: 28px;
+					}
+					p {
+						text-align: justify;
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+	.adventure {
+		.adventure-button {
+			width: 600px;
+		}
+	}
+
+	.footer {
+		.footer-top {
+			.footer-right {
+				h2 {
+					margin-bottom: 20px;
+				}
+				li {
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1100px) {
+	.wrapper {
+		width: 1100px;
+	}
+	main {
+		display: flex;
+		justify-content: center;
+
+		.hero {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			background-image: url('../../src/img/Jungle-large.jpg');
+			.hero-title {
+				width: 1100px;
+				padding: 0;
+				h1 {
+					font-size: 38px;
+				}
+			}
+		}
+		.adventure {
+			.adventure-button {
+				width: 700px;
+			}
+		}
+	}
+
+	.offers {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.offers-box {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			gap: 20px;
+			flex-wrap: nowrap;
+
+			.offer {
+				width: 325px;
+				.offer-content {
+					ul {
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+}
